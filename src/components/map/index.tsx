@@ -38,9 +38,13 @@ export const MapComponent = () => {
       }
     });
   }, []);
+
   useEffect(() => {
-    set(ref(db, "markers"), markers);
+    if (markers.length > 0) {
+      set(ref(db, "markers"), markers);
+    }
   }, [markers]);
+
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,

@@ -36,7 +36,7 @@ export const MarkerForm = ({
   });
 
   if (markers.length < 1) {
-    return <p>Please click on map to add marker</p>;
+    return <p className="titleReminder">Please click on map to add marker</p>;
   }
 
   return (
