@@ -1,15 +1,7 @@
 //import libs
 import { MarkerClustererF, MarkerF } from "@react-google-maps/api";
 
-type CustomMarkerProps = {
-  points: {
-    id: number;
-    position: google.maps.LatLngLiteral;
-    timeStamp: string;
-    counter: number;
-  }[];
-  onMarkerDragEnd: (e: google.maps.MapMouseEvent, id: number) => void;
-};
+import { CustomMarkerProps } from "../../types";
 
 export const CustomMarker = ({
   points,

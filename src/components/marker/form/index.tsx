@@ -1,16 +1,7 @@
 // import styles
 import "./index.css";
 
-type MarkerFormProps = {
-  markers: {
-    id: number;
-    position: google.maps.LatLngLiteral;
-    timeStamp: string;
-    counter: number;
-  }[];
-  deleteMarker: (markerId: number) => void;
-  clearAllMarker: () => void;
-};
+import { MarkerFormProps } from "../../types/index";
 
 export const MarkerForm = ({
   markers,

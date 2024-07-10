@@ -6,13 +6,7 @@ import { ref, set, getDatabase, push, onValue } from "firebase/database";
 import { CustomMarker } from "../marker/custom";
 import { MarkerForm } from "../marker/form";
 import { db } from "../../firebase";
-
-type IMarker = {
-  id: number;
-  position: google.maps.LatLngLiteral;
-  timeStamp: string;
-  counter: number;
-};
+import { IMarker } from "../types/index";
 
 const containerStyle = {
   width: "100%",
